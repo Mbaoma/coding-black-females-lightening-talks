@@ -37,21 +37,3 @@ $ docker login #URL - https://hub.docker.com/
 $ docker pull mbaoma/lunchbox:latest
 $ docker run -p 8000:8000  mbaoma/lunchbox:latest #to test
 ```
-
-## Running the app (Kubernetes Cluster)
-- Set up an Ingress controller in Docker Desktop environment on a Mac
-```bash
-$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
-$ kubectl apply -f ingress.yaml
-```
-
-- Apply configurations to run in local environment (I am using Docker Desktop on my Mac)
-```
-$ kubectl apply -f k8s-config-initial
-```
-
-<img width="741" alt="image" src="https://github.com/Mbaoma/fastAPI/assets/49791498/a179ab37-de18-435b-96cd-24cf3c5f6f95">
-
-## ArgoCD Deployment 
-- [Install](https://argo-cd.readthedocs.io/en/stable/getting_started/) ArgoCD
-- Reference [this](https://github.com/Mbaoma/argocd-local-deployments) repo, to view the deployment.
